@@ -1,0 +1,6 @@
+fabrizio/softplan/cadastro/model/Pessoa.class
+fabrizio/softplan/cadastro/service/exception/PessoaNotFoundException.class
+fabrizio/softplan/cadastro/service/PessoaService.class
+fabrizio/softplan/cadastro/repository/PessoaRepository.class
+fabrizio/softplan/cadastro/controller/WebController.class
+fabrizio/softplan/cadastro/CadastroApplication.class

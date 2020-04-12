@@ -1,0 +1,11 @@
+/home/fabrizio/SoftPlan/cadastro-back/src/main/java/fabrizio/softplan/cadastro/security/RestAuthenticationEntryPoint.java
+/home/fabrizio/SoftPlan/cadastro-back/src/main/java/fabrizio/softplan/cadastro/config/CustomWebSecurityConfigurerAdapter.java
+/home/fabrizio/SoftPlan/cadastro-back/src/main/java/fabrizio/softplan/cadastro/service/exception/SameCPFException.java
+/home/fabrizio/SoftPlan/cadastro-back/src/main/java/fabrizio/softplan/cadastro/service/exception/PessoaNotFoundException.java
+/home/fabrizio/SoftPlan/cadastro-back/src/main/java/fabrizio/softplan/cadastro/controller/WebController.java
+/home/fabrizio/SoftPlan/cadastro-back/src/main/java/fabrizio/softplan/cadastro/service/exception/DadosInvalidosException.java
+/home/fabrizio/SoftPlan/cadastro-back/src/main/java/fabrizio/softplan/cadastro/repository/PessoaRepository.java
+/home/fabrizio/SoftPlan/cadastro-back/src/main/java/fabrizio/softplan/cadastro/model/Pessoa.java
+/home/fabrizio/SoftPlan/cadastro-back/src/main/java/fabrizio/softplan/cadastro/service/PessoaService.java
+/home/fabrizio/SoftPlan/cadastro-back/src/main/java/fabrizio/softplan/cadastro/security/CustomFilter.java
+/home/fabrizio/SoftPlan/cadastro-back/src/main/java/fabrizio/softplan/cadastro/CadastroApplication.java
