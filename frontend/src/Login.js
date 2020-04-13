@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import AppNavbar from "./AppNavBar";
 import {Alert, Button, Container, Form, FormGroup, Input, Label} from "reactstrap";
 
+
 class Login extends Component {
     loginInfoEmpty = {
         usuario: "",
@@ -41,9 +42,10 @@ class Login extends Component {
         headers.set('Content-Type', 'application/json');
 
 
-        await fetch('/api/pessoa/', {
+        await fetch('http://localhost:8080/api/pessoa/', {
             method: 'GET',
             headers: headers,
+            credentials: 'include'
         }).then(value => {
 
             if (value.status === 401) {
@@ -62,8 +64,9 @@ class Login extends Component {
 
             }
 
-        });
+        }).catch(reason => console.log(reason))
     }
+
 
     render() {
         const {loginInfo} = this.state;
@@ -71,6 +74,7 @@ class Login extends Component {
 
         return <div>
             <AppNavbar/>
+            <h2 style={{textAlign: "center"}} >Login</h2>
             <Container>
                 <div>
                     <Alert color="warning" isOpen={loginInfo.errado}>
@@ -79,12 +83,12 @@ class Login extends Component {
                 </div>
                 <Form onSubmit={this.handleSubmit}>
                     <FormGroup>
-                        <Label for="usuario">Nome</Label>
+                        <Label for="usuario">Usuário: </Label>
                         <Input type="text" name="usuario" id="usuario" value={loginInfo.usuario || ''}
                                onChange={this.handleChange}/>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="senha">Senha</Label>
+                        <Label for="senha">Senha: </Label>
                         <Input type="password" name="senha" id="senha" value={loginInfo.senha || ''}
                                onChange={this.handleChange}>
                         </Input>

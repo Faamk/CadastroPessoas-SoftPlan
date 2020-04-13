@@ -12,9 +12,17 @@ class PessoaList extends Component {
     }
 
     componentDidMount() {
+
         this.setState({isLoading: true});
 
-        fetch('api/pessoa')
+        fetch('http://localhost:8080/api/pessoa/',{
+            method: "GET",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            credentials: 'include'
+        })
             .then(value => {
                 if (value.status === 401) {
                     throw new Error ("Unauthorized")
@@ -33,7 +41,8 @@ class PessoaList extends Component {
     }
 
     async remove(id) {
-        await fetch(`/api/pessoa/${id}`, {
+
+        await fetch(`http://localhost:8080/api/pessoa/${id}`, {
             method: 'DELETE',
             headers: {
                 'Accept': 'application/json',

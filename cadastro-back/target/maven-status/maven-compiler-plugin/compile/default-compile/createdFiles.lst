@@ -1,6 +1,10 @@
 fabrizio/softplan/cadastro/model/Pessoa.class
-fabrizio/softplan/cadastro/service/exception/PessoaNotFoundException.class
+fabrizio/softplan/cadastro/config/RestAuthenticationEntryPoint.class
 fabrizio/softplan/cadastro/service/PessoaService.class
+fabrizio/softplan/cadastro/service/exception/SameCPFException.class
 fabrizio/softplan/cadastro/repository/PessoaRepository.class
+fabrizio/softplan/cadastro/service/exception/DadosInvalidosException.class
+fabrizio/softplan/cadastro/config/CustomWebSecurityConfigurerAdapter.class
 fabrizio/softplan/cadastro/controller/WebController.class
 fabrizio/softplan/cadastro/CadastroApplication.class
+fabrizio/softplan/cadastro/service/exception/PessoaNotFoundException.class

@@ -8,6 +8,7 @@ import {validate as validateCPF} from 'gerador-validador-cpf'
 
 class PessoaEdit extends Component {
 
+
     emptyPessoa = {
         id: '',
         nome: '',
@@ -39,8 +40,13 @@ class PessoaEdit extends Component {
     }
 
     async componentDidMount() {
+
         if (this.props.match.params.id !== 'new') {
-            const pessoa = await (await fetch("/api/pessoa/" + this.props.match.params.id).then(value => {
+            const pessoa = await (await fetch("http://localhost:8080/api/pessoa/" + this.props.match.params.id,
+                {
+                    credentials: 'include',
+
+                }).then(value => {
                     if (value.status === 401) {
                         this.props.history.push('/')
                     }
@@ -118,13 +124,15 @@ class PessoaEdit extends Component {
         }
 
         if (validate(this)) {
+
             if (item.id) {
-                await fetch('/api/pessoa/' + item.id, {
+                await fetch('http://localhost:8080/api/pessoa/' + item.id, {
                     method: 'PUT',
                     headers: {
                         'Accept': 'application/json',
                         'Content-Type': 'application/json'
                     },
+                    credentials: 'include',
                     body: JSON.stringify(item),
                 }).then(value => {
 
@@ -147,12 +155,14 @@ class PessoaEdit extends Component {
                 });
             } else {
 
-                await fetch('/api/pessoa', {
+                await fetch('http://localhost:8080/api/pessoa', {
                     method: 'POST',
                     headers: {
                         'Accept': 'application/json',
                         'Content-Type': 'application/json'
                     },
+                    credentials: 'include',
+
                     body: JSON.stringify(item),
                 }).then(value => {
 

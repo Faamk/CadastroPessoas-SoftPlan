@@ -18,8 +18,19 @@ class AppNavbar extends Component {
         });
     }
     async logout() {
-        await fetch('/logout', {
-            method: 'POST'
+
+        let headers = new Headers();
+        headers.set('Authorization', 'Basic ' + btoa(" : "));
+        headers.set('Accept', 'application/json');
+        headers.set('Content-Type', 'application/json');
+
+
+        await fetch('http://localhost:8080/logout', {
+            method: 'POST',
+            credentials: 'include',
+            headers:headers
+
+
         }).then(value => {
                 this.props.history.push('/');
             });

@@ -18,6 +18,7 @@ import java.util.List;
 
 
 @Controller
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping(path = "/api")
 public class WebController {
 
